@@ -1,24 +1,67 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# usersテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| nickname           | string     | null: false                    |
+| email              | string     | null: false, unique: true      |
+| encrypted_password | string     | null: false                    |
+| target_weight      | integer    | null: false                    |
+| target_water       | integer    | null: false                    |
 
-Things you may want to cover:
+### Association
+- has_many :weights
+- has_many :water
+- has_many :motions
 
-* Ruby version
 
-* System dependencies
+# weightsテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| weight             | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* Configuration
+### Association
+- belongs_to :user
 
-* Database creation
 
-* Database initialization
+# waterテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| water              | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* How to run the test suite
+### Association
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+# motionsテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| motion             | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
-* ...
+### Association
+- belongs_to :user
+
+
+# trainingテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| training_name      | string     | null: false                    |
+| user               | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- has_many :training_menus
+
+
+# training_menusテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| menu_name          | string     | null: false                    |
+| time               | integer    | null: false                    |
+| training           | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :training
