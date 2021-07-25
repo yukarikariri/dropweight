@@ -1,0 +1,40 @@
+<div class="session-new-header">
+  <div class="header">
+    <h2>ログイン</h2>
+    <ul class = "header-bar" >
+      <%= link_to 'トップページへ戻る', root_path, class: "log-out" %>
+    </ul>
+  </div>
+</div>
+
+<div class="session-new-main">
+  <div class="form-area">
+    <div class="login-form">
+      <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+        <div class="field">
+          <%= f.label :Eメール %>
+          <span class="indispensable">必須</span><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :パスワード %>
+          <span class="indispensable">必須</span><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+
+        <%# if devise_mapping.rememberable? %>
+          <%# <div class="field"> %>
+            <%#= f.check_box :remember_me %>
+            <%#= f.label :remember_me %>
+          <%# </div> %>
+        <%# end %>
+
+        <div class="actions">
+          <%= f.submit "ログイン" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%#= render "devise/shared/links" %>

@@ -1,0 +1,54 @@
+<body>
+  <header class='top-page-header'>
+    <div class='search-bar-contents'>
+      <ul class='lists-right'>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+        <% end %>
+      </ul>
+    </div>
+  </header>
+
+  <div class='main'>
+    <div class='title-contents'>
+      <div class='service-title'>
+        DropWeight 
+      </div>
+    </div>
+    <p class='service-explain'>
+      お水は大事だよね
+    </p>
+    <p class='service-explain'>
+      うん、大事
+    </p>
+    <div class='store-btn'>
+      <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
+      <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
+    </div>
+  </div>
+
+  <div class='footer'>
+    <div class='footer-contents'>
+      <div class='furima-details'>
+        <h2 class='footer-content-head'>FURIMAについて</h2>
+        <ul>
+          <li><a href="#", class="footer-link">プライバシーポリシー</a></li>
+          <li><a href="#", class="footer-link">FURIMA利用規約</a></li>
+          <li><a href="#", class="footer-link">ポイントに関する特約</a></li>
+        </ul>
+      </div>
+      <div class='furima-details'>
+        <h2 class='footer-content-head'>FURIMAについて</h2>
+        <ul>
+          <li><a href="#", class="footer-link">FURIMAガイド</a></li>
+          <li><a href="#", class="footer-link">FURIMAロゴ利用ガイドライン</a></li>
+          <li><a href="#", class="footer-link">お知らせ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>

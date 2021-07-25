@@ -1,0 +1,185 @@
+// Place all the styles related to the weights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+  background-color: #4dc0d4;
+  text-decoration: none;
+  color: white;
+}
+
+/* ヘッダー部 */
+.top-page-header {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-bar-contents {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+}
+
+.lists-right{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+  background-color: transparent;
+  margin-right: 15px;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  font-weight: bold;
+}
+
+.logout {
+  text-decoration: none;
+}
+
+.login {
+  margin-right: 3vw;
+  color: white
+}
+.sign-up {
+  color: white
+}
+
+.drop-icon{
+  width: 5vw;
+  background-color: transparent;
+}
+
+.title-contents{
+  width: 100vw;
+  height: 22vh;
+  background-image: image-url('eye_catch3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.apple-btn{
+  margin-right: 1vw;
+  height: 7vh;
+}
+
+.google-btn{
+  height: 7vh;
+}
+
+.service-title{
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  /* background-color: rgba(255,255,255, 0.55); */
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 90px;
+  letter-spacing: 12px;
+  text-align: center;
+  padding: 0px 30px
+}
+
+/* フッター部 */
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #FFF;
+  text-align: center;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.furima-details {
+  margin: 0 4vw;
+}
+
+.footer-content-head {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #FFF;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.footer>p {
+  font-size: 14px;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+// ログイン画面
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  border-bottom:4px double white ;
+  margin: 0 auto;
+}
+
+.header-bar{
+  justify-content: center;
+  background-color: transparent;
+}
+
+.log-out{
+  background-color: transparent;
+}
+
+.session-new-main{
+  margin: 15px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.form-area{
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  // border: 1px solid black;
+  background: rgba(255,255,255, 0.55);
+}
+
+.login-form{
+  justify-content: center;
+}
+
+.field{
+  margin: 20px;
+}
+
+.actions{
+  margin: 20px;
+}
+
+
+// 新規登録画面
