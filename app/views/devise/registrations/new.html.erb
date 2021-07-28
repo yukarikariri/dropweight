@@ -2,7 +2,7 @@
   <div class="header">
     <h2>新規登録</h2>
         <ul class = "header-bar" >
-      <%= link_to 'トップページへ戻る', root_path, class: "log-out" %>
+      <%= link_to 'トップページへ戻る', root_path, class: "top-page" %>
     </ul>
   </div>
 </div>
@@ -45,6 +45,13 @@
       <div class="field">
         <%= f.label :"目標摂取水分量(ℓ)" %><br />
         <%= f.text_field :target_water %>
+      </div>
+      <div class="water-explanation">
+        ※1日の目標摂取水分量の目安※<br />
+        女性：1.7ℓ〜2.0ℓ<br />
+        男性：2.2ℓ〜2.5ℓ<br />
+        35㎖✖️体重(kg)を参考にご自身の体調に合わせて<br />
+        設定してください
       </div>
 
       <div class="actions">

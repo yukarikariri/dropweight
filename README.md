@@ -1,13 +1,13 @@
 # README
 
 # usersテーブル
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| nickname           | string     | null: false                    |
-| email              | string     | null: false, unique: true      |
-| encrypted_password | string     | null: false                    |
-| target_weight      | integer    | null: false                    |
-| target_water       | integer    | null: false                    |
+| Column             | Type             | Options                        |
+| ------------------ | ---------------- | ------------------------------ |
+| nickname           | string           | null: false                    |
+| email              | string           | null: false, unique: true      |
+| encrypted_password | string           | null: false                    |
+| target_weight      | integer          | null: false                    |
+| target_water       | decimal(3, 2)    | null: false, unsigned          |
 
 ### Association
 - has_many :weights
@@ -39,6 +39,7 @@
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | motion             | integer    | null: false                    |
+| start_time         | datetime   | null; false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association

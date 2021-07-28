@@ -25,7 +25,6 @@
 
 .lists-right{
   display: flex;
-  justify-content: flex-end;
   list-style: none;
   align-items: center;
   background-color: transparent;
@@ -57,7 +56,7 @@
 
 .title-contents{
   width: 100vw;
-  height: 22vh;
+  height: 20vh;
   background-image: image-url('eye_catch3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,7 +64,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 20px 20px;
+  padding: 18px 18px;
 }
 
 .apple-btn{
@@ -78,16 +77,12 @@
 }
 
 .service-title{
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 90px;
   letter-spacing: 12px;
-  text-align: center;
-  // padding: 0px 20px
 }
 
 /* フッター部 */
@@ -145,12 +140,18 @@
 }
 
 .header-bar{
-  justify-content: center;
+  display: flex;
   background-color: transparent;
+  list-style: none;
 }
 
-.log-out{
+.top-page{
+  justify-content: space-between;
+}
+
+.logout{
   background-color: transparent;
+  margin-left: 40px;
 }
 
 .session-new-main{
@@ -164,7 +165,6 @@
   display: flex;
   justify-content: center;
   width: 30vw;
-  // border: 1px solid black;
   background: rgba(255,255,255, 0.55);
 }
 
@@ -180,5 +180,51 @@
   margin: 20px;
 }
 
+.water-explanation{
+  font-size: 14px;
+}
+// カレンダー部
+.simple-calendar{
+  width: 80vw;
+  margin: 20px auto;
+}
 
-// 新規登録画面
+.calendar-heading{
+  display: flex;
+  margin: 5px 0;
+}
+
+.calendar-title{
+  font-size: 25px;
+}
+
+.input{
+  border: 1px solid;
+  padding: 5px;
+}
+
+.calendar-heading{
+  justify-content: space-between;
+}
+
+.today{
+  color: #ea352d;
+}
+
+.calendar_icon{
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+}
+
+.excersize_image{
+  width : 3vw;
+  height: 5vh;
+  background-color: transparent;
+}
+
+.toilet_image{
+  width: 3vw;
+  height: 5vh;
+  background-color: transparent;
+}

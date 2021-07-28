@@ -7,8 +7,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string   :nickname,           null: false
       t.string   :email,              null: false, default: ""
       t.string   :encrypted_password, null: false, default: ""
-      t.integer  :target_weight,      null: false
-      t.integer  :target_water
+      t.float    :target_weight,      null: false, precision:4, scale: 1
+      t.float    :target_water,       null: false, precision:3, scale: 2
 
       ## Recoverable
       t.string   :reset_password_token
