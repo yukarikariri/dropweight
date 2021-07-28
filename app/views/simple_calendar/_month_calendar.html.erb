@@ -7,7 +7,7 @@
         <%= link_to t('simple_calendar.next', default: "#{start_date.month+1}月"), calendar.url_for_next_view %>
       </div>
     </div>
-    <%= link_to '入力する', "#", class:"input", id: "input-button" %>
+    <%= link_to '入力する', new_motion_path, class:"input", id: "input-button" %>
   </div>
 
   <table class="table table-striped">
