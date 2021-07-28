@@ -5,7 +5,7 @@
     </h2>
     <ul class='header-bar'>
       <li><%= link_to 'トップページへ戻る', root_path, class: "top-page" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "ログアウトします。よろしいですか？"}, class: "logout" %>
     </ul>
   </div>
 </div>

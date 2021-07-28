@@ -77,15 +77,12 @@
 }
 
 .service-title{
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 90px;
   letter-spacing: 12px;
-  text-align: center;
 }
 
 /* フッター部 */
@@ -182,12 +179,52 @@
 .actions{
   margin: 20px;
 }
+
+.water-explanation{
+  font-size: 14px;
+}
 // カレンダー部
 .simple-calendar{
   width: 80vw;
-  margin: auto;
+  margin: 20px auto;
+}
+
+.calendar-heading{
+  display: flex;
+  margin: 5px 0;
 }
 
 .calendar-title{
   font-size: 25px;
+}
+
+.input{
+  border: 1px solid;
+  padding: 5px;
+}
+
+.calendar-heading{
+  justify-content: space-between;
+}
+
+.today{
+  color: #ea352d;
+}
+
+.calendar_icon{
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+}
+
+.excersize_image{
+  width : 3vw;
+  height: 5vh;
+  background-color: transparent;
+}
+
+.toilet_image{
+  width: 3vw;
+  height: 5vh;
+  background-color: transparent;
 }
