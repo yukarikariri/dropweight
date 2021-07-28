@@ -1,0 +1,33 @@
+<div class='session-new-header'>
+  <div  class="header">
+    <h2>
+      <%= "お通じの入力" %>
+    </h2>
+    <ul class='header-bar'>
+      <li><%= link_to 'トップページへ戻る', root_path, class: "top-page" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "ログアウトします。よろしいですか？"}, class: "logout" %>
+    </ul>
+  </div>
+</div>
+
+<div class="session-new-main">
+  <div class="form-area">
+    <%= form_with model:@motion, url: motions_path, class: 'motion-input', local: true do |f| %>
+      <div class="field">
+        <%= f.label :日付%>
+        <span class="indispensable">必須</span><br />
+        <%= f.date_select :start_time, autofocus: true, use_month_numbers: true, default: { year: Date.today.year, month: Date.today.month, day: Date.today.day } %>
+      </div>
+
+      <div class="field">
+        <%= f.label :お通じ有無%>
+        <span class="indispensable">必須</span><br />
+        <%= f.check_box :motion, autofocus: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "OK" %>
+      </div>
+    <% end %>
+  </div>
+</div>
