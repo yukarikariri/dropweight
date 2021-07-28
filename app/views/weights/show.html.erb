@@ -1,7 +1,7 @@
 <div class='session-new-header'>
   <div  class="header">
     <h2>
-      <%= "#{current_user.nickname}さんの#{Date.today.month}月のがんばり" %>
+      <%= "#{current_user.nickname}さんのマイページ" %>
     </h2>
     <ul class='header-bar'>
       <li><%= link_to 'トップページへ戻る', root_path, class: "top-page" %></li>
@@ -11,7 +11,11 @@
 </div>
 
 <div class="my-page-main">
-  <%= month_calendar do |date| %>
-    <%= date.day %>
+  <%#= month_calendar do |date| %>
+  <%= month_calendar events: @motions do |date, motions| %>
+    <%= date.day %><br />
+    <% motions.each do |motion| %>
+      <%= image_tag "toilet.png", alt: "toilet_image" , class: "toilet_image"%>
+    <% end %>
   <% end %>
 </div>

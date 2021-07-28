@@ -38,7 +38,7 @@
 # motionsテーブル
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| motion             | integer    | null: false                    |
+| motion             | boolean    | null: false                    |
 | start_time         | datetime   | null; false                    |
 | user               | references | null: false, foreign_key: true |
 
