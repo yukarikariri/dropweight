@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root to: 'weights#index' 
   resources :weights, only: [:show, :new, :create]
   resources :motions, only: [:new, :create]
+  resources :waters, only: [:new, :create]
 end

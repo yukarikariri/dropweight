@@ -18,7 +18,7 @@
 # weightsテーブル
 | Column             | Type             | Options                        |
 | ------------------ | -----------------| ------------------------------ |
-| weight             | float(4, 1)      | null: false                    |
+| weight             | float(3, 2)      | null: false                    |
 | start_time         | datetime         | null; false                    |
 | user               | references       | null: false, foreign_key: true |
 
@@ -27,10 +27,11 @@
 
 
 # waterテーブル
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| water              | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
+| Column             | Type           | Options                        |
+| ------------------ | -------------- | ------------------------------ |
+| water              | float(2, 1)    | null: false                    |
+| start_time         | datetime       | null; false                    |
+| user               | references     | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user

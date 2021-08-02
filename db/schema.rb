@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_29_230606) do
+ActiveRecord::Schema.define(version: 2021_08_02_130135) do
 
   create_table "motions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "motion", null: false
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2021_07_29_230606) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "waters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.float "water", null: false
+    t.datetime "start_time", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_waters_on_user_id"
+  end
+
   create_table "weights", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.float "weight", null: false
     t.datetime "start_time", null: false
@@ -46,5 +55,6 @@ ActiveRecord::Schema.define(version: 2021_07_29_230606) do
   end
 
   add_foreign_key "motions", "users"
+  add_foreign_key "waters", "users"
   add_foreign_key "weights", "users"
 end
