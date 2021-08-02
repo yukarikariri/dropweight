@@ -1,6 +1,52 @@
 function weightGraph (){
-  var ctx = document.getElementById('weightGraph').getContext('2d');
-  var weightGraph = new Chart(ctx, {
+    var ctx1 = document.getElementById('weightGraph');
+    var weightGraph = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: JSON.parse(ctx1.dataset.labels),
+            datasets: [
+            {
+                type: 'line',
+                label: '体重の推移',
+                data: JSON.parse(ctx1.dataset.data),
+                fill: false,
+                borderColor : "rgba(4,10,250,0.3)",
+                tension: 0
+            },
+            {
+                type: 'line',
+                label: '目標',
+                data: JSON.parse(ctx1.dataset.goal),
+                borderColor : 'rgba(254,97,132,0.8)',
+                tension: 0
+            }
+            ],
+            }
+        })
+}
+
+//######OK#############
+// function weightGraph (){
+//     var ctx1 = document.getElementById('weightGraph');
+//     var weightGraph = new Chart(ctx1, {
+//         type: 'line',
+//         data: {
+//             labels: JSON.parse(ctx1.dataset.labels),
+//             datasets: [{
+//                 label: '体重の推移',
+//                 data: JSON.parse(ctx1.dataset.data),
+//                 fill: false,
+//                 borderColor : "rgba(4,10,250,0.3)",
+//                 tension: 0
+//                 }],
+//             },
+//         })
+// }
+//######OK#############
+
+function waterGraph (){
+  var ctx2 = document.getElementById('waterGraph').getContext('2d');
+  var waterGraph = new Chart(ctx2, {
       type: 'bar',
           data: {
               labels: ["Red", "Blue", "Yellow", "Green", "Purple",  "Orange"],
@@ -39,3 +85,4 @@ function weightGraph (){
 } 
 
 window.addEventListener('load', weightGraph)
+window.addEventListener('load', waterGraph)

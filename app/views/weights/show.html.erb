@@ -14,12 +14,13 @@
   <div class="graph-area">
     <div class="weight-graph">
       <%###NG####= line_chart {name:"test", data: @graph.map{ |record| record.slice(:start_time, :motion).values}} %>
-      <%= line_chart Motion.group_by_day(:start_time).count %>
-    </div>
+      <%###OK####= line_chart Weight.group_by_day(:start_time).count %>
+      <%#=<canvas id="weightGraph" data-labels="<%= @weights " data-data="<%= @weights% </canvas%>
+      <canvas id="weightGraph" data-labels="<%= @dates %>" data-data="<%= @weights %>" data-goal="<%= @goalweight %>"></canvas>
+    </div>  
 
     <div class="water-graph" >
-      <canvas id="weightGraph"></canvas>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js"></script>
+      <canvas id="waterGraph"></canvas>
     </div>
   </div>
 
