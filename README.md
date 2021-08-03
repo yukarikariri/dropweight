@@ -6,8 +6,8 @@
 | nickname           | string           | null: false                    |
 | email              | string           | null: false, unique: true      |
 | encrypted_password | string           | null: false                    |
-| target_weight      | integer          | null: false                    |
-| target_water       | decimal(3, 2)    | null: false, unsigned          |
+| target_weight      | float(4, 1)      | null: false                    |
+| target_water       | float(3, 2)      | null: false, unsigned          |
 
 ### Association
 - has_many :weights
@@ -16,20 +16,22 @@
 
 
 # weightsテーブル
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| weight             | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
+| Column             | Type             | Options                        |
+| ------------------ | -----------------| ------------------------------ |
+| weight             | float(3, 2)      | null: false                    |
+| start_time         | datetime         | null; false                    |
+| user               | references       | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
 
 
 # waterテーブル
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| water              | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
+| Column             | Type           | Options                        |
+| ------------------ | -------------- | ------------------------------ |
+| water              | float(2, 1)    | null: false                    |
+| start_time         | datetime       | null; false                    |
+| user               | references     | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
@@ -38,7 +40,7 @@
 # motionsテーブル
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| motion             | boolean    | null: false                    |
+| motion             | string     | null: false                    |
 | start_time         | datetime   | null; false                    |
 | user               | references | null: false, foreign_key: true |
 

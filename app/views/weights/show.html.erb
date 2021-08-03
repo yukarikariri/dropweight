@@ -11,7 +11,19 @@
 </div>
 
 <div class="my-page-main">
-  <%#= month_calendar do |date| %>
+  <div class="graph-area">
+    <div class="weight-graph">
+      <%###NG####= line_chart {name:"test", data: @graph.map{ |record| record.slice(:start_time, :motion).values}} %>
+      <%###OK####= line_chart Weight.group_by_day(:start_time).count %>
+      <%#=<canvas id="weightGraph" data-labels="<%= @weights " data-data="<%= @weights% </canvas%>
+      <canvas id="weightGraph" data-labels="<%= @dates %>" data-data="<%= @weights %>" data-goal="<%= @goalweight %>"></canvas>
+    </div>  
+
+    <div class="water-graph" >
+      <canvas id="waterGraph" data-labels="<%= @dates_water %>" data-data="<%= @waters %>" data-goal="<%= @goalwater %>"></canvas>
+    </div>
+  </div>
+
   <%= month_calendar events: @motions do |date, motions| %>
     <%= date.day %><br />
     <% motions.each do |motion| %>

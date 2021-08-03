@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "simple_calendar", "~> 2.4"
 gem 'pry-rails'
+gem "chartkick"
+gem 'groupdate'
