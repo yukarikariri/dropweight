@@ -173,11 +173,45 @@
 }
 
 .field{
-  margin: 20px;
+  margin: 40px 20px;
+}
+
+.in-date{
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.in-weight{
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.in-water{
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.motion-check{
+  width: 20px;
+  height: 20px;
 }
 
 .actions{
   margin: 20px;
+}
+
+.ok-button{
+  font-size: 15px;
+  border: 1px solid white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.re-button{
+  font-size: 15px;
+  border: 1px solid white;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .water-explanation{
@@ -244,33 +278,15 @@
 
 .in-button{
   font-size: 15px;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 8px;
   cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 
 .more span{
   position: relative;
-}
-
-.more:hover ul.more_list {
-  display: block;
-}
-
-.more ul.more_list {
-  display: block;
-  text-align: left;
-  font-size: 13px;
-  list-style: none;
-  display: none;
-  border-radius: 3px;
-  width: 130px;
-}
-
-.more ul.more_list li {
-  border: 1px solid #fff;
-  z-index: 0;
 }
 
 .calendar-heading{
