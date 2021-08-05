@@ -98,7 +98,6 @@ function waterGraph (){
                 data: JSON.parse(ctx2.dataset.data),
                 backgroundColor: "rgba(4,10,250,0.3)",
                 borderColor: "rgba(4,10,250,0.3)",
-                borderWidth: 1
               },
               {
                 type: 'line',
@@ -106,7 +105,6 @@ function waterGraph (){
                 data: JSON.parse(ctx2.dataset.goal),
                 fill: false,
                 borderColor: 'rgba(254,97,132,0.8)',
-                borderWidth: 1
             }
             ]
           },

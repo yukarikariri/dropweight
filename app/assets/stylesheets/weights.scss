@@ -223,14 +223,32 @@
   padding: 5px;
 }
 
-.more {
+#input-weight{
   cursor: pointer;
+}
+
+.more {
   top: 20px;
   // right: 10px;
   // z-index: 2;
   // height: 100px;
   text-align: left;
+  display: flex;
 }
+
+.input-button{
+  border: 1px white;
+  padding: 3px;
+  margin: 3px;
+}
+
+.in-button{
+  font-size: 15px;
+  border: 1px solid white;
+  padding: 8px;
+  cursor: pointer;
+}
+
 
 .more span{
   position: relative;
