@@ -7,21 +7,17 @@
         <%= link_to t('simple_calendar.next', default: "#{start_date.month+1}月"), calendar.url_for_next_view %>
       </div>
     </div>
-      <%####OK#######= link_to '入力する', new_motion_path, class:"input", id: "input-button" %>
+
     <div class="more">
-      <span><%= image_tag 'arrow_top.png' %>入力する</span>
-      <ul class="more_list">
-        <li>
-          <%= link_to 'お通じ', new_motion_path, method: :get%>
-        </li>
-        <li>
-          <%= link_to '体重', new_weight_path, method: :get %>
-        </li>
-        <li>
-          <%= link_to '摂取水分量', new_water_path, method: :get %>
-        </li>
-      <%# end %>
-      </ul>
+        <div class="input-button">
+          <%= button_to '体重', new_weight_path, method: :get, class:"in-button" %>
+        </div>
+        <div class="input-button">
+          <%= button_to '摂取水分量', new_water_path, method: :get, class:"in-button" %>
+        </div>
+        <div class="input-button">
+          <%= button_to 'お通じ', new_motion_path, method: :get, class:"in-button" %>
+        </div>
     </div>
   </div>
 

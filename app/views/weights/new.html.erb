@@ -12,7 +12,7 @@
 
 <div class="session-new-main">
   <div class="form-area">
-    <%= form_with model:@weight, url: weights_path, class: 'motion-input', local: true do |f| %>
+    <%= form_with model:@weight, url: weights_path, class: 'weight-input',id: 'weight-input' , local: true do |f| %>
       <div class="field">
         <%= f.label :日付%>
         <span class="indispensable">必須</span><br />
@@ -26,7 +26,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "OK" %>
+        <%= f.submit "OK", id: 'weight-submit'%>
       </div>
     <% end %>
   </div>
