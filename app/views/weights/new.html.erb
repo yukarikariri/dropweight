@@ -16,7 +16,6 @@
       <div class="field">
         <%= f.label :日付, class:"label"%>
         <span class="indispensable">必須</span><br />
-        <%#= f.date_select :start_time, autofocus: true, use_month_numbers: true, default: { year: Date.today.year, month: Date.today.month, day: Date.today.day } %>
         <%= f.date_field :start_time, autofocus: true, use_month_numbers: true, default: { year: Date.today.year, month: Date.today.month, day: Date.today.day }, class: "in-date" %>
       </div>
 

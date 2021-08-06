@@ -129,6 +129,19 @@
   font-weight: bold;
 }
 
+// 新規登録画面
+.registrations-new-main{
+  margin: 15px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.filed-area{
+  border: 1px solid white;
+  height: 25px;
+}
+
 // ログイン画面
 .header{
   display: flex;
@@ -164,12 +177,13 @@
 .form-area{
   display: flex;
   justify-content: center;
-  width: 30vw;
+  width: 40vw;
   background: rgba(255,255,255, 0.55);
 }
 
 .login-form{
   justify-content: center;
+  width: 60%;
 }
 
 .field{
@@ -216,6 +230,7 @@
 
 .water-explanation{
   font-size: 14px;
+  margin: 10px;
 }
 // グラフエリア
 .graph-area{

@@ -14,13 +14,13 @@
         <div class="field">
           <%= f.label :Eメール %>
           <span class="indispensable">必須</span><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"filed-area" %>
         </div>
 
         <div class="field">
           <%= f.label :パスワード %>
           <span class="indispensable">必須</span><br />
-          <%= f.password_field :password, autocomplete: "current-password" %>
+          <%= f.password_field :password, autocomplete: "current-password", class:"filed-area" %>
         </div>
 
         <%# if devise_mapping.rememberable? %>
@@ -31,7 +31,7 @@
         <%# end %>
 
         <div class="actions">
-          <%= f.submit "ログイン" %>
+          <%= f.submit "ログイン", class:"ok-button" %>
         </div>
       <% end %>
     </div>
