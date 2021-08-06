@@ -4,7 +4,7 @@
       <%= "体重の入力" %>
     </h2>
     <ul class='header-bar'>
-      <li><%= link_to 'トップページへ戻る', root_path, class: "top-page" %></li>
+      <li><%= link_to 'マイページへ戻る', weight_path(current_user.id), class: "top-page" %></li>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: "ログアウトします。よろしいですか？"}, class: "logout" %>
     </ul>
   </div>
@@ -14,19 +14,19 @@
   <div class="form-area">
     <%= form_with model:@weight, url: weights_path, class: 'weight-input',id: 'weight-input' , local: true do |f| %>
       <div class="field">
-        <%= f.label :日付%>
+        <%= f.label :日付, class:"label"%>
         <span class="indispensable">必須</span><br />
-        <%= f.date_select :start_time, autofocus: true, use_month_numbers: true, default: { year: Date.today.year, month: Date.today.month, day: Date.today.day } %>
+        <%= f.date_field :start_time, autofocus: true, use_month_numbers: true, default: { year: Date.today.year, month: Date.today.month, day: Date.today.day }, class: "in-date" %>
       </div>
 
       <div class="field">
         <%= f.label :'体重(kg)'%>
         <span class="indispensable">必須</span><br />
-        <%= f.text_field :weight, autofocus: true %>
+        <%= f.text_field :weight, autofocus: true, class: "in-weight" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "OK", id: 'weight-submit'%>
+        <%= f.submit "OK", id: 'weight-submit', class:"ok-button" %>
       </div>
     <% end %>
   </div>

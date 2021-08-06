@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<div class="session-new-main">
+<div class="registrations-new-main">
   <div class="form-area">
     <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -15,36 +15,36 @@
       <div class="field">
         <%= f.label :ニックネーム %>
         <span class="indispensable">必須</span><br />
-        <%= f.text_field :nickname, autofocus: true %>
+        <%= f.text_field :nickname, autofocus: true, class:"filed-area" %>
       </div>
 
       <div class="field">
         <%= f.label :Eメール %>
         <span class="indispensable">必須</span><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"filed-area" %>
       </div>
 
       <div class="field">
         <%= f.label :パスワード %>
         <span class="indispensable">必須</span><br />
-        <%= f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上" %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上" , class:"filed-area"%>
       </div>
 
       <div class="field">
         <%= f.label :"パスワード(確認)" %>
         <span class="indispensable">必須</span><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class:"filed-area" %>
       </div>
 
       <div class="field">
         <%= f.label :"目標体重(kg)" %>
         <span class="indispensable">必須</span><br />
-        <%= f.text_field :target_weight %>
+        <%= f.text_field :target_weight , placeholder: "例）49、65.5", class:"filed-area" %>
       </div>
 
       <div class="field">
         <%= f.label :"目標摂取水分量(ℓ)" %><br />
-        <%= f.text_field :target_water %>
+        <%= f.text_field :target_water, placeholder: "例）1.5、2",class:"filed-area" %>
       </div>
       <div class="water-explanation">
         ※1日の目標摂取水分量の目安※<br />
@@ -55,7 +55,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "新規登録する" %>
+        <%= f.submit "新規登録する", class:"ok-button" %>
       </div>
     <% end %>
   </div>
