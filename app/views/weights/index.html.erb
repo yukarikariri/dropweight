@@ -19,33 +19,75 @@
         DropWeight 
       </div>
     </div>
-    <p class='service-explain'>
-      お水は大事だよね
-    </p>
-    <p class='service-explain'>
-      うん、大事
-    </p>
-    <div class='store-btn'>
-      <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#" %>
-      <%= link_to image_tag("google-play.png", class:"google-btn"), "#" %>
+    <div class='top-images'>
+      <div class='service-image'>
+        <%= image_tag("top_image_1.jpg", class:"top_image") %>
+      </div>
+      <div class='service-image'>
+        <%= image_tag("top_image_2.jpg", class:"top_image") %>
+      </div>
+      <div class='service-image'>
+        <%= image_tag("top_image_3.jpg", class:"top_image") %>
+      </div>
+    </div>
+
+    <div class="questions-area">
+      <h2 class="question">ダイエットでこんなことお悩みではないですか？</h2>
+      <div class="worries-sentence">
+        <ul class="worries-lists">
+          <li class="worries-list">がんばって食事制限も運動しているのに体重が落ちない・・
+          </li>
+          <li class="worries-list">停滞期が長く続いていて、モチベーションが続かない・・
+          </li>
+          <li class="worries-list">ただ体重を落とすだけじゃなくて、健康的にダイエットを続けたい
+          </li>
+        </ul>
+      </div>
+      <div class="arrow"><%= image_tag("drop_icon_blue.PNG", class:"arrow_under") %></div>
+    </div>
+
+    <div class="questions-area">
+      <h2 class="question">一度、体質から見直してみませんか？<h2>
+      <div class="worries-sentence">
+        <ul class="worries-lists">
+          <li class="worries-list">体重がなかなか落ちないのは、体質が原因かもしれません
+          </li>
+          <li class="worries-list">きちんと毎日お通じがありますか？
+          </li>
+          <li class="worries-list">そのために、しっかり毎日お水飲めていますか？
+          </li>
+          <li class="worries-list">DropWeightは、毎日飲んだお水の量とお通じがあったかどうかで自分の体質を把握して、<br />
+                                   健康的にダイエットを続けていくことを目的としたアプリです
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-image">
+        <div class='store-btn'>
+          <%= link_to image_tag("app-store.svg", class:"apple-btn"), "#", class:"apple-btn" %>
+          <%= link_to image_tag("google-play.png", class:"google-btn"), "#", class:"google-btn" %>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class='footer'>
     <div class='footer-contents'>
-      <div class='furima-details'>
-        <h2 class='footer-content-head'>FURIMAについて</h2>
-        <ul>
+      <div class='dropweight-details'>
+        <h2 class='footer-content-head'>DropWeightについて</h2>
+        <ul class="footer-content">
           <li><a href="#", class="footer-link">プライバシーポリシー</a></li>
-          <li><a href="#", class="footer-link">FURIMA利用規約</a></li>
+          <li><a href="#", class="footer-link">DropWeight利用規約</a></li>
           <li><a href="#", class="footer-link">ポイントに関する特約</a></li>
         </ul>
       </div>
-      <div class='furima-details'>
-        <h2 class='footer-content-head'>FURIMAについて</h2>
-        <ul>
-          <li><a href="#", class="footer-link">FURIMAガイド</a></li>
-          <li><a href="#", class="footer-link">FURIMAロゴ利用ガイドライン</a></li>
+      <div class='dropweight-details'>
+        <h2 class='footer-content-head'>DropWeightについて</h2>
+        <ul class="footer-content">
+          <li><a href="#", class="footer-link">DropWeightガイド</a></li>
+          <li><a href="#", class="footer-link">DropWeightロゴ利用ガイドライン</a></li>
           <li><a href="#", class="footer-link">お知らせ</a></li>
         </ul>
       </div>
