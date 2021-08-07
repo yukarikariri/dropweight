@@ -67,13 +67,32 @@
   padding: 18px 18px;
 }
 
+.footer-image{
+  width: 100vw;
+  height: 10vh;
+  background-image: image-url('eye_catch3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-btn{
+  background-color: transparent;
+}
+
 .apple-btn{
-  margin-right: 1vw;
+  margin-right: 4vw;
   height: 7vh;
+  background-color: transparent;
 }
 
 .google-btn{
   height: 7vh;
+  background-color: transparent;
 }
 
 .service-title{
@@ -85,10 +104,69 @@
   letter-spacing: 12px;
 }
 
+
+.top-images{
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 40vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.questions-area{
+  width: 100vw;
+  height: 35vh;
+  margin-bottom: 30px;
+  // padding: 20px 0;
+}
+
+.question{
+  margin: 10px auto 10px;
+  // background:linear-gradient(transparent 40%, #0099ff 0%);
+  text-align: center;
+  width: 45%;
+  box-shadow: 0px -10px 10px -5px rgba(0, 153, 255, 1) inset,0px 10px 5px -3px #0099ff;
+  font-weight: bold
+}
+
+.worries-sentence{
+display: flex;
+justify-content: center;
+margin-bottom: 10px;
+}
+
+.worries-list{
+  background-color: transparent;
+  font-size: 18px;
+  // width: 80%;
+}
+
+.arrow{
+  height: 8vh;
+  width: 5vw;
+  margin:0 auto 10px;
+}
+
+.arrow_under{
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+}
+
+.service-image{
+  width: 30%;
+}
+
+.top_image{
+  width: 100%;
+  height: 100%;
+}
+
 /* フッター部 */
 .footer {
   width: 100vw;
-  padding: 5vh 0;
+  // padding: 5vh 0;
   color: #FFF;
   text-align: center;
 }
@@ -96,10 +174,9 @@
 .footer-contents {
   display: flex;
   justify-content: center;
-  margin-bottom: 5vh;
 }
 
-.furima-details {
+.dropweight-details{
   margin: 0 4vw;
 }
 
@@ -109,10 +186,16 @@
   margin-bottom: 10px;
 }
 
+.footer-content{
+  list-style: none;
+}
+
 .footer-link {
   color: #FFF;
   font-size: 12px;
   line-height: 30px;
+  display: flex;
+  justify-content: left;
 }
 
 .footer>p {
