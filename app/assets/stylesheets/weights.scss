@@ -335,17 +335,6 @@ margin-bottom: 10px;
 }
 
 // カレンダー部
-.simple-calendar{
-  width: 80vw;
-  margin: 20px auto;
-  // z-index: auto;
-}
-
-.calendar-heading{
-  display: flex;
-  margin: 5px 0;
-}
-
 .calendar-title{
   font-size: 25px;
 }
@@ -361,9 +350,6 @@ margin-bottom: 10px;
 
 .more {
   top: 20px;
-  // right: 10px;
-  // z-index: 2;
-  // height: 100px;
   text-align: left;
   display: flex;
 }
@@ -382,17 +368,10 @@ margin-bottom: 10px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-
-.more span{
-  position: relative;
-}
-
 .calendar-heading{
   justify-content: space-between;
-}
-
-.today{
-  color: #ea352d;
+  display: flex;
+  margin: 5px 0;
 }
 
 .calendar_icon{
@@ -411,4 +390,92 @@ margin-bottom: 10px;
   width: 3vw;
   height: 5vh;
   background-color: transparent;
+}
+
+// .simple-calendar.css オリジナルをコピペ
+// application.cssに"*= require simple_calendar"を書くと罫線の色等、変えられない
+.simple-calendar {
+  width: 80vw;
+  margin: 20px auto;
+}
+
+.simple-calendar {
+  table {
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  tr {
+    border-collapse: collapse;
+  }
+
+  th {
+    padding: 6px;
+    border-bottom: 2px solid white;;
+    border-collapse: collapse;
+    border-left: 1px solid white;;
+    border-right: 1px solid white;;
+    border-top: 0px none rgb(51, 51, 51);
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  td {
+    padding: 6px;
+    vertical-align: top;
+    width: 14%;
+
+    border: 1px solid #ddd;
+    border-top-color: white;;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: white;;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: white;;
+    border-left-style: solid;
+    border-left-width: 1px;
+  }
+
+  .day {
+    height: 80px;
+  }
+
+  // .wday-0 {}
+  // .wday-1 {}
+  // .wday-2 {}
+  // .wday-3 {}
+  // .wday-4 {}
+  // .wday-5 {}
+  // .wday-6 {}
+
+  .today {
+    background: rgb(17, 231, 213);
+    color: #ea352d;
+    font-weight: bold;  
+  }
+
+  // .past {}
+  // .future {}
+
+  // .start-date {}
+
+  .prev-month {
+    background: darkgray;
+  }
+  .next-month {
+    background: darkgray;
+  }
+  // .current-month {}
+
+  // .has-events {}
 }

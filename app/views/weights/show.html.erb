@@ -26,8 +26,12 @@
 
   <%= month_calendar events: @motions do |date, motions| %>
     <%= date.day %><br />
+    <% date_check = "" %>
     <% motions.each do |motion| %>
-      <%= image_tag "toilet.png", alt: "toilet_image" , class: "toilet_image"%>
+      <% if date_check != motion.start_time %>
+        <%= image_tag "toilet.png", alt: "toilet_image" , class: "toilet_image"%>
+        <% date_check = motion.start_time %>
+      <% end %>
     <% end %>
   <% end %>
 </div>
