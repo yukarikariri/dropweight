@@ -24,14 +24,28 @@
     </div>
   </div>
 
-  <%= month_calendar events: @motions do |date, motions| %>
+  <%= month_calendar(events: @motions) do |date, motions| %>
     <%= date.day %><br />
-    <% date_check = "" %>
+
+    <% date_check1 = "" %>
     <% motions.each do |motion| %>
-      <% if date_check != motion.start_time %>
+      <% if date_check1 != motion.start_time %>
         <%= image_tag "toilet.png", alt: "toilet_image" , class: "toilet_image"%>
-        <% date_check = motion.start_time %>
+        <% date_check1 = motion.start_time %>
       <% end %>
     <% end %>
   <% end %>
+
+  <%= month_calendar(events: @trainings) do |date, trainings| %>
+    <%= date.day %><br />
+
+    <% date_check2 = "" %>
+    <% trainings.each do |training| %>
+      <% if date_check2 != training.start_time %>
+        <%= image_tag "excercise.png", alt: "excersize_image" , class: "excersize_image"%>
+        <% date_check2 = training.start_time %>
+      <% end %>
+    <% end %>
+  <% end %>
+
 </div>

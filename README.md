@@ -51,6 +51,17 @@
 # trainingテーブル
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
+| training           | string     | null: false                    |
+| start_time         | datetime   | null; false                    |
+| user               | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+
+
+# my_trainingテーブル
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
 | training_name      | string     | null: false                    |
 | user               | references | null: false, foreign_key: true |
 

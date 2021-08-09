@@ -2,9 +2,9 @@
   <div class="calendar-heading">
     <div class="calendar-header">
       <div class="calendar-left">
-        <%= link_to t('simple_calendar.previous', default: "#{start_date.month-1}月"), calendar.url_for_previous_view %>
+        <%= link_to t('simple_calendar.previous', default: "#{start_date.month-1}月"), calendar.url_for_previous_view, id: "calender_previous" %>
         <span class="calendar-title"><%= "《#{start_date.year}年" %> <%= "#{start_date.month}月》" %> </span>
-        <%= link_to t('simple_calendar.next', default: "#{start_date.month+1}月"), calendar.url_for_next_view %>
+        <%= link_to t('simple_calendar.next', default: "#{start_date.month+1}月"), calendar.url_for_next_view, id: "calender_next" %>
       </div>
     </div>
 
@@ -17,6 +17,9 @@
         </div>
         <div class="input-button">
           <%= button_to 'お通じ', new_motion_path, method: :get, class:"in-button" %>
+        </div>
+        <div class="input-button">
+          <%= button_to '運動', new_training_path, method: :get, class:"in-button" %>
         </div>
     </div>
   </div>

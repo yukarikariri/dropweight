@@ -6,6 +6,8 @@ class WeightsController < ApplicationController
     @motion = Motion.new
     @motions = Motion.where(user_id: current_user.id)
 
+    @trainings = Training.where(user_id: current_user.id)
+
     ### 【体重推移グラフ】データ取得＆JavaScriptへ受け渡しのための加工
     # dates = Weight.date_range(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
     dates_weights = Weight.user_weight(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
