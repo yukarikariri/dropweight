@@ -16,11 +16,23 @@
       <%###NG####= line_chart {name:"test", data: @graph.map{ |record| record.slice(:start_time, :motion).values}} %>
       <%###OK####= line_chart Weight.group_by_day(:start_time).count %>
       <%#=<canvas id="weightGraph" data-labels="<%= @weights " data-data="<%= @weights% </canvas%>
-      <canvas id="weightGraph" data-labels="<%= @dates %>" data-data="<%= @weights %>" data-goal="<%= @goalweight %>"></canvas>
+      <% if @dates.present? %>
+        <canvas id="weightGraph" data-labels="<%= @dates %>" data-data="<%= @weights %>" data-goal="<%= @goalweight %>"></canvas>
+      <% else %>
+        <div class="no-data">
+          体重データがありません
+        </div>
+      <% end %>
     </div>  
 
     <div class="water-graph" >
-      <canvas id="waterGraph" data-labels="<%= @dates_water %>" data-data="<%= @waters %>" data-goal="<%= @goalwater %>"></canvas>
+      <% if @dates_water.present? %>
+        <canvas id="waterGraph" data-labels="<%= @dates_water %>" data-data="<%= @waters %>" data-goal="<%= @goalwater %>"></canvas>
+      <% else %>
+        <div class="no-data">
+          お水のデータがありません
+        </div>
+      <% end %>
     </div>
   </div>
 

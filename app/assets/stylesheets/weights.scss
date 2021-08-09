@@ -332,11 +332,22 @@ margin-bottom: 10px;
 .weight-graph{
   width: 45%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .water-graph{
   width: 45%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data{
+  font-weight: bold;
+  font-size: 25px;
 }
 
 // カレンダー部
