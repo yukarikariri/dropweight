@@ -1,12 +1,10 @@
 function input (){
-
-  console.log("load ok");
- 
-  const exerciseIcon = document.getElementsByClassName("top-page");
-
-  exerciseIcon = addEventListener("mouseover", () => {
-    console.log("mouseover")
-  });
+  let calendarPrevious = document.getElementById('calender_previous');
+  calendarPrevious.addEventListener('click', () => {
+    const XHR = new XMLHttpRequest();
+    XHR.open('GET', "/weight", true);
+    XHR.responseType = "json";
+    });
 };
 
 window.addEventListener('load', input);

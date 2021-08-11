@@ -6,9 +6,19 @@ class WeightsController < ApplicationController
     @motion = Motion.new
     @motions = Motion.where(user_id: current_user.id)
 
+    @trainings = Training.where(user_id: current_user.id)
+
     ### 【体重推移グラフ】データ取得＆JavaScriptへ受け渡しのための加工
     # dates = Weight.date_range(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
-    dates_weights = Weight.user_weight(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
+    #OK######dates_weights = Weight.user_weight(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
+
+    if params[:start_date].blank?
+      dates_weights = Weight.user_weight(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
+    else
+      bigining_of_month = params[:start_date].to_date.beginning_of_month
+      end_of_month = params[:start_date].to_date.end_of_month
+      dates_weights = Weight.user_weight(current_user.id, bigining_of_month, end_of_month)
+    end
     goal = User.find(current_user.id)
 
     @dates = []
@@ -29,7 +39,15 @@ class WeightsController < ApplicationController
     # end
 
     ### 【摂取水分量グラフ】データ取得＆JavaScriptへ受け渡しのための加工
-    date_waters = Water.user_water(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
+    #OK######date_waters = Water.user_water(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
+
+    if params[:start_date].blank?
+      date_waters = Water.user_water(current_user.id, Date.today.beginning_of_month, Date.today.end_of_month)
+    else
+      bigining_of_month = params[:start_date].to_date.beginning_of_month
+      end_of_month = params[:start_date].to_date.end_of_month
+      date_waters = Water.user_water(current_user.id, bigining_of_month, end_of_month)
+    end
 
     @dates_water = []
     @waters = []

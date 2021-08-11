@@ -7,7 +7,6 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../graph")
-// require("../input")
 
 import "chartkick/chart.js"
 

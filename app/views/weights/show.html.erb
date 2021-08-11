@@ -16,18 +16,48 @@
       <%###NG####= line_chart {name:"test", data: @graph.map{ |record| record.slice(:start_time, :motion).values}} %>
       <%###OK####= line_chart Weight.group_by_day(:start_time).count %>
       <%#=<canvas id="weightGraph" data-labels="<%= @weights " data-data="<%= @weights% </canvas%>
-      <canvas id="weightGraph" data-labels="<%= @dates %>" data-data="<%= @weights %>" data-goal="<%= @goalweight %>"></canvas>
+      <% if @dates.present? %>
+        <canvas id="weightGraph" data-labels="<%= @dates %>" data-data="<%= @weights %>" data-goal="<%= @goalweight %>"></canvas>
+      <% else %>
+        <div class="no-data">
+          体重データがありません
+        </div>
+      <% end %>
     </div>  
 
     <div class="water-graph" >
-      <canvas id="waterGraph" data-labels="<%= @dates_water %>" data-data="<%= @waters %>" data-goal="<%= @goalwater %>"></canvas>
+      <% if @dates_water.present? %>
+        <canvas id="waterGraph" data-labels="<%= @dates_water %>" data-data="<%= @waters %>" data-goal="<%= @goalwater %>"></canvas>
+      <% else %>
+        <div class="no-data">
+          お水のデータがありません
+        </div>
+      <% end %>
     </div>
   </div>
 
-  <%= month_calendar events: @motions do |date, motions| %>
+  <%= month_calendar(events: @motions) do |date, motions| %>
     <%= date.day %><br />
+
+    <% date_check1 = "" %>
     <% motions.each do |motion| %>
-      <%= image_tag "toilet.png", alt: "toilet_image" , class: "toilet_image"%>
+      <% if date_check1 != motion.start_time %>
+        <%= image_tag "toilet.png", alt: "toilet_image" , class: "toilet_image"%>
+        <% date_check1 = motion.start_time %>
+      <% end %>
     <% end %>
   <% end %>
+
+  <%= month_calendar(events: @trainings) do |date, trainings| %>
+    <%= date.day %><br />
+
+    <% date_check2 = "" %>
+    <% trainings.each do |training| %>
+      <% if date_check2 != training.start_time %>
+        <%= image_tag "excercise.png", alt: "excersize_image" , class: "excersize_image"%>
+        <% date_check2 = training.start_time %>
+      <% end %>
+    <% end %>
+  <% end %>
+
 </div>
