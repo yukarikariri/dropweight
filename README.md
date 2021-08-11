@@ -8,6 +8,7 @@
 ・
 
 # URL
+https://dropweight.herokuapp.com/
 
 # テスト用アカウント
 Eメール：test1@test.jp  
